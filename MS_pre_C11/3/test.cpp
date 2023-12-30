@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 int main() {
@@ -13,5 +14,7 @@ int main() {
     //     s[index] = toupper(s[index]);
     // }
     cout << s << endl;
+
+    vector<int> vi(10);
     return 0;
 }
