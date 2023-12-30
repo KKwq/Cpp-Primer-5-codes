@@ -3,18 +3,10 @@
 using namespace std;
 
 int main() {
-    string s = "hello  world!!";
-    for (decltype(s.size()) index = 0; index != s.size(); ++index) {
-        s[index] = toupper(s[index]);
-    }
-
-    // for (decltype(s.size()) index = 0; index != s.size() &&
-    // !isspace(s[index]);
-    //      ++index) {
-    //     s[index] = toupper(s[index]);
-    // }
-    cout << s << endl;
-
-    vector<int> vi(10);
+    unsigned cnt = 42;
+    // 可以正常编译运行，但是仍是不符合C++11标准的
+    string bad[cnt];  // error: cnt is not a constant expression
+    bad[0] = "hi";
+    cout << bad[0] << endl;
     return 0;
 }
